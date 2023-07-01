@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+	<style>
+		code {font-size:15pt;}
+		var {font-size:15pt;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		JavaScript Event Handling Example
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<div class="code" style="width: 95%; line-height: 65%;">
+			<code>
+				&lt;input id=<var>"clickbtn"</var> type=<var>"button"</var> value=<var>"click"</var> <br />
+				onmouseover="document.getElementById(<var>'msg'</var>).innerHTML=<var>'Click Here'</var>" <br />
+		 		onmouseout="document.getElementById(<var>'msg'</var>).innerHTML=<var>'Outside! Clicks are ignored'</var>" onmousedown=<var>"mouseDown()"</var> /&gt;
+		<br /><br />
+
+		&lt;div id=<var>"msg"</var> style="width: 50%; border-style: solid"&gt;  &lt;/div&gt; <br />
+		&lt;script type=<var>"text/javascript"</var>&gt; <br />
+		&nbsp;&nbsp;	var <var>counter</var> = 0; <br />
+		&nbsp;&nbsp;	function <var>mouseDown</var>(){ <br />
+		&nbsp;&nbsp;&nbsp;&nbsp;		<var>counter</var>++; <br />
+		&nbsp;&nbsp;&nbsp;&nbsp;		document.getElementById(<var>'msg'</var>).innerHTML=<var>"A new click"</var>; <br />
+		&nbsp;&nbsp;} <br />
+
+		&nbsp;&nbsp;function <var>mouseUp</var>(){ <br />
+		&nbsp;&nbsp;&nbsp;&nbsp;	window.alert(<var>"Total # of clicks =  "+counter</var>); <br />
+		&nbsp;&nbsp;} <br />
+		&nbsp;&nbsp;document.getElementById(<var>"clickbtn"</var>).onmouseup = <var>mouseUp</var>; <br />
+		&lt;/script&gt;
+			</code>
+		</div>
+		<input id="clickbtn" type="button" value="click" onmouseover="document.getElementById('msg').innerHTML='Click Here'"
+		 onmouseout="document.getElementById('msg').innerHTML='Outside! Clicks are ignored'" onmousedown="mouseDown()" />  <div id="msg" style="width: 50%; border-style: solid"> &nbsp; </div>
+		<script type="text/javascript">
+			var counter = 0;
+			function mouseDown(){
+				counter++;
+				document.getElementById('msg').innerHTML="A new click";
+			}
+
+			function mouseUp(){
+				window.alert("Total # of clicks =  "+counter);
+			}
+			document.getElementById("clickbtn").onmouseup = mouseUp;
+
+		</script>
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

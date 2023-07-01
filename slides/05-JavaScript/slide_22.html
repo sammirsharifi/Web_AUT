@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_small.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Arrays
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li>Methods: <code>concat</code>, <code>shift</code>, <code>unshift</code>, <code>sort</code>, <code>reverse</code>, ... </li>
+			<ul class="l2">	
+			<li><code>let friends = ["Ali", "Reza", "Hassan", "Kazem"];</code></li>
+			<li><code>friends.pop();</code> // Ali,Reza,Hassan</li>	
+			<li><code>let newfriend = friends.concat("amir");</code> // Ali,Reza,Hassan,amir</li>
+			<li><code>newfriend.push("ahmad");</code> // Ali,Reza,Hassan,amir,ahmad</li>
+			<li><code>let x= newfriend.push("ahmad");</code> // 5: The push() method returns the new array length</li>
+			<li><code>let shifttest = newfriend.shift();</code> //Ali: removes the first array element </li>
+			<li>unshift():adds a new element at the beginning, and "unshifts"older elements:returns the new array length</li>
+			<li><code>let sorttest = friends.sort();</code>//Ali,Hassan,Kazem,Reza : sorts an array alphabetically</li>
+			<li>reverse():reverses the elements in an array</li>	
+			</ul>
+			<li>for/of - looping over iterable objects :<code> for (let friend of friends) {....;} </code></li>
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

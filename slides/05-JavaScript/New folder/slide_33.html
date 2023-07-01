@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_small.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		DOM Object Access
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li>element<code>.getElementById(<var>"id"</var>)</code></li>
+				<ul class="l2">
+					<li>returns the object with given "id" in <em>sub-tree</em> rooted at element</li>
+				</ul>
+			<li>element<code>.getElementsByClassName(<var>"classname"</var>)</code></li>
+				<ul class="l2">
+					<li>returns an array of object whose class is "classname" in <em>sub-tree</em> rooted at element</li>
+				</ul>
+			<li>element<code>.getElementsByTagName(<var>"tagname"</var>)</code></li>
+				<ul class="l2">
+					<li>returns an array of objects whose tag is "tagname" in <em>sub-tree</em> rooted at element</li>
+				</ul>
+			<li>element<code>.getElementsByName(<var>"name"</var>)</code></li>
+				<ul class="l2">
+					<li>returns an array of objects whose name is "name"  in <em>sub-tree</em> rooted at element</li>
+				</ul>
+
+			<li>element<code>.querySelector(<var>"CSS Selector"</var>)</code></li>
+				<ul class="l2">
+					<li>returns the first element matches the CSS selector in <em>sub-tree</em> rooted at element</li>
+				</ul>
+				
+			<li>Element <em>must be</em> exists (browser reads XHTML file line-by-line)</li>
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

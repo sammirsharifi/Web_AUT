@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Debugging
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+		<!--
+			<li>If browser shows error message, it indicates the line number</li>
+			<ul class="l2">
+				<li>However, browsers aren't designed to report errors</li>
+				<li>IDEs are more powerful tools</li>
+			</ul>
+		-->
+			<li>Use the DOM tab to find methods &amp; properties</li>
+			<li>Basic debugging via console, <code>console.log()/info()/warn()/error()</code></li>
+			<form>
+				<input type="button" onclick="consoleMsg();" value="Generate Console Message" />
+			</form>
+			<li>Advanced debugging via real debuggers; e.g., FireFox debugger [<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">1</a>][<a href="https://www.smashingmagazine.com/2018/02/javascript-firefox-debugger/">2</a>].
+
+			<li>More secure coding with <code>"<a href="https://www.w3schools.com/js/js_strict.asp">use strict</a>";</code></li>
+			<ul class="l2">
+				<li>All variables should be declared, No duplicate name in function parameters, ...</li>				
+			</ul>
+			<li>Best Practices</li>
+				<ul class="l2">
+					<li>Avoid Global Variables</li>
+					<li>Always Declare Local Variables</li>
+					<li>Beware of Automatic Type Conversions</li>
+					<li>Use <code>===</code> Comparison</li>
+				</ul>
+			<li>Use powerful IDEs for development</li>
+		</ul>
+
+		<script type = "text/javascript">
+			function consoleMsg(){
+				console.debug();
+
+				for (i = 1; i <= 5; i++){
+				console.log("i is %d", i);
+				}
+				console.info("This is info");
+				console.warn("This is a warning");
+				console.error("This is an error");
+			}
+
+		</script>
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

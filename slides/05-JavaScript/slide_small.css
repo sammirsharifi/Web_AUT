@@ -1,0 +1,36 @@
+#pagehead {
+	font-size: 40pt; 
+}
+
+#main {
+	font-size: 26pt;
+}
+
+.l1 > li {
+	padding-top: 17pt;
+}
+
+.l2 {
+	font-size: 24pt;
+}
+
+.l2 > li {
+	padding-top: 3pt
+}
+
+/*
+.code{
+	font-size: 0.8em !important;
+}
+*/
+table{
+	font-size: 25pt;
+}
+
+table code{
+	font-size: 25pt;
+}
+
+table var{
+	font-size: 25pt;
+}

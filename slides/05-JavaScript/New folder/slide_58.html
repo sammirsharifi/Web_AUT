@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+	<style>
+		code {font-size:15pt;}
+		var {font-size:15pt;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Valid Form Submission
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+
+		<div class="code" style="width: 100%">
+			<code>
+				&lt;form action=<var>"http://127.0.0.1"</var> name=<var>"passwordform"</var> onsubmit="<var>checkpassword(event)</var>;"&gt;
+			</code>
+		</div>
+		<br />
+		<form action="http://127.0.0.1" name="passwordform" onsubmit="checkpassword(event);">
+			<fieldset>
+				<legend>
+					Password Manager
+				</legend>
+				<table>
+					<tr>
+						<td>User name:</td><td>
+						<input type="text" name="username" value=""/>
+						</td>
+					</tr>
+					<tr>
+						<td>New Password :</td><td>
+						<input type="password" name="password" value=""/>
+						</td>
+					</tr>
+					<tr>
+						<td>Reenter New Password:</td><td>
+						<input type="password" name="repassword" value=""/>
+						</td>
+					</tr>
+				</table>
+				<input type="submit" value="Change Password"/>
+			</fieldset>
+		</form>
+
+		<div class="code" style="width: 100%">
+			<code>
+			function <var>checkpassword()</var> { <br />
+			&nbsp;&nbsp;var <var>p1</var> = document.<var>passwordform</var>.<var>password</var>.value; <br />
+			&nbsp;&nbsp;var <var>p2</var> = document.<var>passwordform</var>.<var>repassword</var>.value; <br />
+
+			&nbsp;&nbsp;if(p1.length < 6){ alert(<var>"To short password, re-enter"</var>);
+					event.preventDefault();
+			} <br />
+
+			&nbsp;&nbsp;else if(p1 == p2) { alert(<var>"Password will be changed"</var>); } <br />
+			&nbsp;&nbsp;else { alert(<var>"Incorrect password"</var>); event.preventDefault();} <br />
+			} <br />
+			</code>
+		</div>
+
+		<script type="text/javascript">
+			function checkpassword(event) {
+			  var p1 = document.passwordform.password.value;
+			  var p2 = document.passwordform.repassword.value;
+			  if(p1.length < 6){ alert("To short password, re-enter"); event.preventDefault(); }
+			  else if(p1 == p2) { alert("Password will be changed"); }
+			  else { alert("Incorrect password"); event.preventDefault(); }
+			}
+			//document.getElementsByName("passwordform")[0].onsubmit = checkpassword;
+		</script>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

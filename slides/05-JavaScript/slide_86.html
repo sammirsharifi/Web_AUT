@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		JavaScript Access to Cookies
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li> All cookies (set by server or JS itself) are accessible by JavaScript</li>
+			<ul class="l2">
+				<li>Except the cookies with <code>httpOnly</code> attribute</li>
+			</ul>
+			<ul class="l3">
+			<li><code>httpOnly</code>:is a tag added to a browser cookie that prevents client-side scripts from accessing data(specialized cookies just accessed by the server).</li>
+			</ul>
+			<li> Extremely easy approach to read or write cookies </li>
+			<ul class="l2">
+				<li>Cookies are saved in <code>document.cookie</code> as a string</li>
+				<li>To add a cookie, set "name=value" string in <code>document.cookie</code> </li>
+				<li>To read a cookie, parse  <code>document.cookie</code> </li>
+			</ul>
+			<li><em>Note</em>: Chrome by default ignores cookies set by <em>file</em> schema : much more secure and a local web page has no cookie privileges.(Except: the page is running from a web server.)?!!</li>
+			<!--<ul class="l2">
+				<li>To enable cookies for file: <code>chrome --enable-file-cookies</code></li>
+			</ul>
+			-->
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

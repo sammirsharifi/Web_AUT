@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript" src="slide.js"> </script>
+	<script type="text/javascript">
+		var tooSmall = 0;
+		window.onresize = function(){
+			if((window.innerHeight < 500) || (window.innerWidth < 500)){
+				tooSmall = 1;
+				document.body.innerHTML = "";
+
+				msg = document.createElement("h1");
+				msg.innerHTML = "The window is too small, please resize!!!";
+				document.body.appendChild(msg);
+			}
+
+			if((tooSmall == 1)&&((window.innerHeight > 500) && (window.innerWidth > 500))){
+				tooSmall = 0;
+				location.reload();
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="pagehead">
+		window Properties
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li>Window Size (in pixel)</li>
+			<table id="dimension" cellspacing="10pt" cellpadding="10pt">
+				<tr>
+					<td><code>screen.height</code>:</td> <td> </td>
+					<td><code>screen.width</code>:</td> <td> </td>
+				</tr>
+				<tr>
+					<td><code>screen.availHeight</code>:</td> <td> </td>
+					<td><code>screen.availWidth</code>:</td> <td> </td>
+				</tr>
+				<tr>
+					<td><code>outerHeight</code>:</td> <td> </td>
+					<td><code>outerWidth</code>:</td> <td> </td>
+				</tr>
+				<tr>
+					<td><code>innerHeight</code>:</td> <td> </td>
+					<td><code>innerWidth</code>:</td> <td> </td>
+				</tr>
+			</table>
+			<!--<li>Zoom in/out decreases/increases inner* because it makes pixels bigger/smaller</li>-->
+
+			<li>History length: <span id="history"></span></li>
+			<li>Location: <span id="location" style="font-size:0.8em;"></span></li>
+		</ul>
+		<script type="text/javascript">
+			var t = document.getElementById("dimension");
+			(((t.children[0]).children[0]).children[1]).innerHTML = window.screen.height;
+			(((t.children[0]).children[0]).children[3]).innerHTML = window.screen.width;//The screen.width property returns the width of the visitor's screen in pixels.
+
+			(((t.children[0]).children[1]).children[1]).innerHTML = window.screen.availHeight;//The availHeight property returns the height minus interface features like the Windows Taskbar.
+
+
+			(((t.children[0]).children[1]).children[3]).innerHTML = window.screen.availWidth;
+
+			(((t.children[0]).children[2]).children[1]).innerHTML = window.outerHeight;//The outerHeight property returns the outer height of the browser window, including all interface elements (like toolbars/scrollbars).
+			(((t.children[0]).children[2]).children[3]).innerHTML = window.outerWidth;//The outerWidth property returns the outer width of the browser window, including all interface elements (like toolbars/scrollbars).
+
+			(((t.children[0]).children[3]).children[1]).innerHTML = window.innerHeight;//The the inner height of the browser window's content area in pixels.
+			(((t.children[0]).children[3]).children[3]).innerHTML = window.innerWidth;
+
+			document.getElementById("history").innerHTML=window.history.length;
+			document.getElementById("location").innerHTML=window.location;
+		</script>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

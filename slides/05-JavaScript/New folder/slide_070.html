@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_small.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		How to Add JavaScript to HTML?
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li> Embed JavaScript into HTML </li>
+			<div class="code">
+				<code>
+					&lt;script type="text/javascript"&gt; <br />
+					<var>JavaScript code goes here... </var> <br />
+					&lt;/script&gt;
+				</code>
+			</div>
+			<li>Link to external JavaScript</li>
+			<div class="code">
+				<code>
+					&lt;script type="text/javascript" src="<var>external.js</var>" defer="<var>defer</var>"&gt; &lt;/script&gt;
+				</code>
+			</div>
+
+			<li>JavaScript code can be put in both <code>head</code> and <code>body</code></li>
+				<ul class="l2">
+					<li>Browser reads the HTML file, when it reaches to JavaScript code, it runs the code, expect functions that should be called and the deferred scripts 
+				</ul>
+
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

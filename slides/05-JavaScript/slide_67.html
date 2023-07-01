@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Content Generation Example
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<script type="text/javascript">
+		var id = 0;
+		function addNewP(){
+			id++;
+			var parent = document.getElementById("main");
+			var newp = document.createElement("p");
+			newp.id="newp"+id; // id of <p>
+			newp.innerHTML = "I am new paragraph";
+			parent.appendChild(newp);
+		}
+
+		var replace = 0;
+		function replaceNewP(){
+			replace++;
+			if(replace <= id){
+				var parent = document.getElementById("main");
+				var newp = document.getElementById("newp"+replace)
+				var newer = document.createElement("span");
+				newer.style.borderStyle="solid";
+				newer.innerHTML = "I replace the new paragraph";
+				parent.replaceChild(newer,newp);
+			}
+			else
+				replace = id;
+		}
+
+	</script>
+
+	<div id="main">
+		<form>
+			<input type="button" value="Add New Paragraph" onclick="addNewP();" />
+			<input type="button" value="Replace New Paragraph" onclick="replaceNewP();" />
+		</form>
+		<br /><br />
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

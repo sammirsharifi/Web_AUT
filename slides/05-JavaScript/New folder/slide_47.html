@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+	<style>
+		code {font-size:15pt;}
+		var {font-size:15pt;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Dynamic Event Handler Example
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<div class="code" style="width: 95%; line-height: 65%;">
+			<code>
+				&lt;button onclick=<var>"AddEventHandler();</var>"&gt;<var>Add a 'click' event listener to the blue button</var>&lt;/button&gt;<br/>
+				&lt;button onclick=<var>"RemoveEventHandler();</var>"&gt;<var>Remove the event listener</var>&lt;/button&gt; <br/>
+				&lt;button id=<var>"blueButton"</var> style="background-color:blue"&gt;<var>Blue Button</var>&lt;/button&gt;<br />
+				<br />
+
+						&lt;script type=<var>"text/javascript"</var>&gt;</br>
+								&nbsp;&nbsp;&nbsp;function <var>blueClick1</var>(){</br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert (<var>"You have clicked on me!!!"</var>);</br>
+								&nbsp;&nbsp;&nbsp;}</br>
+
+								&nbsp;&nbsp;&nbsp;function <var>blueClick2</var>(){</br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert (<var>"Yahoooo!!!!"</var>);</br>
+								&nbsp;&nbsp;&nbsp;}</br>
+
+								&nbsp;&nbsp;&nbsp;function <var>AddEventHandler</var>(){</br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	var <var>blueButton</var> = document.getElementById(<var>"blueButton"</var>);</br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<var>blueButton</var>.addEventListener ("click", <var>blueClick1</var>);</br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<var>blueButton</var>.addEventListener ("click", <var>blueClick2</var>);</br>
+								&nbsp;&nbsp;&nbsp;}</br>
+
+								&nbsp;&nbsp;&nbsp;function <var>RemoveEventHandler</var>(){</br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var <var>blueButton</var> = document.getElementById(<var>"blueButton"</var>);</br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<var>blueButton</var>.removeEventListener("click", <var>blueClick1</var>);</br>
+								&nbsp;&nbsp;&nbsp;}</br>
+							&lt;/script&gt;
+			</code>
+		</div>
+
+		<button onclick="AddEventHandler ();">Add a 'click' event listener to the blue button</button>
+		<button onclick="RemoveEventHandler ();">Remove the event listener</button>
+		<button id="blueButton" style="background-color:blue">Bule Button</button>
+
+
+		<script type="text/javascript">
+				function blueClick1() {
+				    alert ("You have clicked on me!!!");
+				}
+
+				function blueClick2() {
+				    alert ("Yahoooo!!!!");
+				}
+
+				function AddEventHandler() {
+				    var blueButton = document.getElementById ("blueButton");
+			        blueButton.addEventListener ("click", blueClick1);
+					blueButton.addEventListener ("click", blueClick2);
+				}
+
+				function RemoveEventHandler () {
+				    var blueButton = document.getElementById ("blueButton");
+			        blueButton.removeEventListener ("click", blueClick1);
+				}
+			</script>
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

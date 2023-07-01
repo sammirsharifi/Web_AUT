@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css");</style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		How to Pass Inputs to Event Handlers?
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li> It is easy when the handler is registered in HTML </li>
+			<div class="code">
+			<code>function <var>setBgColor(color)</var>{
+				document.body.style.backgroundColor = <var>color</var>;
+			}<br />
+			&lt;button onclick=<var>"setBgColor('red')"</var>&gt;<var>Red</var>&lt;/button&gt; <br />
+			&lt;button onclick=<var>"setBgColor('green')"</var>&gt;<var>Green</var>&lt;/button&gt;
+			</code>
+			</div>
+			<script type="text/javascript">
+				function setBgColor(color){
+					document.body.style.backgroundColor = color;
+				}
+			</script>
+			<button onclick="setBgColor('red')">Red</button> <button onclick="setBgColor('green')">Green</button>
+
+			<li><em>Find out</em> the required information (specially when the handler is registered in JS)</li>
+
+			<div class="code">
+			<code><var>color:</var>&lt;input type="text" id=<var>"color"</var>&gt;&lt;/text&gt;<br/>
+			&lt;button id=<var>"set"</var>&gt;<var>set</var>&lt;/button&gt;<br/><br/>
+
+			function <var>setBgColor2</var>(){
+				document.body.style.backgroundColor = document.getElementById(<var>"color"</var>).value;
+			}<br/>
+			document.getElementById(<var>"set"</var>).onclick=<var>setBgColor2</var>;
+			</code>
+			</div>
+
+			color:<input type="text" id="color"></text> <button id="set">set</button>
+
+			<script type="text/javascript">
+			function setBgColor2(){
+				document.body.style.backgroundColor = document.getElementById("color").value;
+			}
+			document.getElementById("set").onclick=setBgColor2;
+			</script>
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

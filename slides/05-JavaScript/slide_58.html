@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css");</style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		How to Pass Inputs to Event Handlers (cont'd)?
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li>Use <code><em>this</em></code> only when the handler is registered in JS</li>
+
+			<div class="code">
+			<code>
+	
+			function <var>setBgColor3</var>(){<br />
+			&nbsp;&nbsp;&nbsp; window.alert(<var>"this ="</var> + this);<br />
+			&nbsp;&nbsp;&nbsp; document.body.style.backgroundColor = <em>this</em>.innerHTML;<br />
+			}<br />
+
+			document.getElementById(<var>"r"</var>).onclick=<var>setBgColor3</var>;<br />
+			document.getElementById(<var>"b"</var>).onclick=<var>setBgColor3</var>;<br /><br />
+
+			&lt;button id=<var>"r"</var>&gt;<var>Red</var>&lt;/button&gt; <br />
+			&lt;button id=<var>"b"</var>&gt;<var>Blue</var>&lt;/button&gt; <br />
+			&lt;button onclick="document.body.style.backgroundColor = this.innerHTML;"&gt;<var>Green</var>&lt;/button&gt; <br />
+			&lt;button onclick=<var>"setBgColor3();"</var>&gt;<var>Black</var>&lt;/button&gt; <br />
+
+			</code>
+			</div>
+
+			&nbsp; &nbsp; &nbsp; &nbsp; <button id="r">Red</button>
+			<button id="b">Blue</button>
+
+			<script type="text/javascript">
+			function setBgColor3(){
+				window.alert("this =" + this);
+				document.body.style.backgroundColor = this.innerHTML;
+			}
+
+			document.getElementById("r").onclick=setBgColor3;
+			document.getElementById("b").onclick=setBgColor3;
+			</script>
+
+			<button onclick="document.body.style.backgroundColor = this.innerHTML;">Green</button>
+			<button onclick="setBgColor3();">Black</button>
+
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

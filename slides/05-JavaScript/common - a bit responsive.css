@@ -1,0 +1,142 @@
+
+html{
+	font-size: 4vh;
+}
+
+body{
+	border-style: solid; 
+	border-width: 1px ;
+}
+
+#pagehead {
+
+	font-size: 2.35rem;
+	font-family: Calibri; 
+	color: #0000AA; 
+	
+	height: 10vh;
+	max-height: 10vh;
+	overflow: hidden;
+	padding-top: 10pt;
+	padding-bottom: 5pt; 
+	
+	border-style: solid; 
+	border-width: 1px ;
+	
+}
+
+#topline {
+	font-size: 0.15rem;
+	width: 100%;
+	height: 1.7%;
+	background-color: #AA0000;
+}
+
+#main {
+	font-family: Calibri; 
+	font-size: 1.4rem;
+	height: 71.5vh;
+	max-height: 71.5vh;
+	overflow: auto;
+	
+	border-style: solid; 
+	border-width: 1px;
+	
+}
+
+.l1 > li {
+	padding-top: 1%;
+}
+
+.l1 > li:first-child {
+	padding-top: 0pt;
+	margin-top: -20pt;
+}
+
+.l2 {
+	font-size: 1.1rem;
+}
+
+.l2 > li {
+	padding-top: 4pt
+}
+
+#bottomline {
+	font-size: 0.1rem;
+	width: 100%;
+	height: 0.8%;			
+	background-color: #AA0000;
+	margin-bottom: 3pt;
+}
+
+#bottomline + table {
+	height:1vh;
+	max-height:1vh;
+}
+
+#bottomline + table > tbody > tr > td > img {
+	height:6vh;
+	max-height:6vh;
+
+}
+
+#pagenumber{
+	max-height: 10%;
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	/*font-size: 15pt;*/
+	font-size: .75rem;
+}
+
+em {
+	color: #AA0000;
+}
+
+code{
+	font-size: 90%;
+	color: #0000DD;
+	font-weight: bold;
+	font-family: "Courier New";
+}
+
+var{
+	font-family: "Courier New";
+	color: black;
+}
+
+.code{
+	border-style: solid;
+	border-color: #BBBBBB;
+	margin-top: 10pt;
+	width: 90%;
+	line-height: 90%;
+	margin-left: auto; 
+	margin-right: auto; 		
+}
+
+table{
+	border: 1;
+	border-spacing: 0;
+	font-size: 0.8rem;
+	
+	border-style: solid; 
+	border-width: 1px ;
+f	
+}
+
+table code{
+	font-size: 0.8rem;
+}
+
+table var{
+	font-size: 0.8rem;
+}
+
+.inactive {
+	color: gray;
+}
+
+[value="Run"]{
+	margin-left: 5%;
+}

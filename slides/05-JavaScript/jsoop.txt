@@ -1,0 +1,101 @@
+function createNewPerson(name) {
+  var obj = {};
+  obj.name = name;
+  obj.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+  return obj;
+}
+
+
+var salva = createNewPerson('Salva');
+salva.name;
+salva.greeting();
+
+================================
+
+
+
+function Person(first, last, age, gender, interests) {
+  this.name = {
+    'first': first,
+    'last' : last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+  this.bio = function() {
+    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  };
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+}
+
+var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+
+
+window.alert(person1['age']);
+window.alert(person1.interests[1]);
+person1.bio()
+
+===========================================
+
+function Test(){
+	this.myx = 10;
+	this.myy = 20;
+}
+
+Test.prototype.returnval = function(){ window.alert(this.myx +' '+ this.myy);}
+
+test3 = new Test();
+test3.returnval();
+
+
+==========================================
+
+function MyObject(valx){
+	window.alert("A new MyObject!!!");
+	this.x = valx;
+	this.getX = function(){
+		return this.x;
+	}
+}
+
+obj1 = new MyObject(10);
+window.alert(obj1.getX());
+
+class NewObject extends MyObject{
+	constructor(valy){
+		super(100);
+		this.y = valy;
+	}
+	setX(newVal){
+		this.x = newVal;
+	}
+}
+
+obj2 = new NewObject(200);
+window.alert(obj2.getX());
+obj2.setX(3000);
+window.alert(obj2.getX());
+
+class AnotherObject extends NewObject{
+	constructor(){
+		super(50000);
+	}
+
+	getX(){
+		return this.x + 1000;
+	}
+	
+	static add(a,b){
+		return (a + b);
+	}
+}
+
+obj3 = new AnotherObject();
+window.alert(AnotherObject.add(obj3.getX(),obj3.y));
+
+
+

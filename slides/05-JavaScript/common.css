@@ -1,0 +1,110 @@
+
+body{
+	padding-left: 10pt;
+	padding-right: 10pt;	
+}
+
+#pagehead {
+	font-size: 45pt; 
+	font-family: Calibri; 
+	color: #0000AA; 
+	height: 8.5%;
+	padding-top: 10pt;
+	padding-bottom: 5pt; 
+}
+
+#topline {
+	font-size: 1pt;
+	width: 100%;
+	height: 1.7%;			
+	background-color: #AA0000;
+}
+
+#main {
+	font-family: Calibri; 
+	font-size: 29pt;
+	height: 75.5%;
+}
+
+.l1 > li {
+	padding-top: 20pt;
+}
+
+.l1 > li:first-child {
+	padding-top: 0pt;
+	margin-top: -20pt;
+}
+
+.l2 {
+	font-size: 27pt;
+}
+
+.l2 > li {
+	padding-top: 4pt
+}
+
+#bottomline {
+	font-size: 1pt;
+	width: 100%;
+	height: 0.8%;			
+	background-color: #AA0000;
+	margin-bottom: 3pt;
+}
+
+#pagenumber{
+	height: 10%;
+	text-align: center;
+	padding-top: 5pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+em {
+	color: #AA0000;
+}
+
+code{
+	font-size: 90%;
+	color: #0000DD;
+	font-weight: bold;
+	font-family: "Courier New";
+}
+
+var{
+	font-family: "Courier New";
+	color: black;
+}
+
+.code{
+	border-style: solid;
+	border-color: #BBBBBB;
+	margin-top: 10pt;
+	width: 90%;
+	line-height: 90%;
+	margin-left: auto; 
+	margin-right: auto; 		
+}
+
+table{
+	border: 1;
+	border-spacing: 0;
+	font-size: 26pt;
+}
+
+table code{
+	font-size: 26pt;
+}
+
+table var{
+	font-size: 26pt;
+}
+
+.inactive {
+	color: gray;
+
+}
+
+[value="Run"]{
+	margin-left: 5%;
+}

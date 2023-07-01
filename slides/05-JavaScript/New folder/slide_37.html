@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_tiny.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body style="background-color: white !important;">
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		CSS &amp; JavaScript Example
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<div class="code">
+			<code>
+			var <var>color</var>; <br />
+			var <var>index</var> = prompt(<var>"Enter 1 for blue, 2 for red, 3 for green"</var>); <br />
+			switch(parseInt(<var>index</var>)) { <br />
+			&nbsp;&nbsp;case 1: <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<var>color = "blue";</var>
+			break; <br />
+			&nbsp;&nbsp;case 2: <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<var>color = "red";</var>
+			break; <br />
+			&nbsp;&nbsp;case 3: <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<var>color = "green";</var>
+			break; <br />
+			&nbsp;&nbsp;default: <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<var>color = "black";</var>
+				break; <br />
+			} <br /> <br />
+			document.body.style.backgroundColor = <var>color</var>; <br />
+			/*<var>or</var> <br />
+			 (document.getElementsByTagName("body"))[0].style.backgroundColor = <var>color</var>; <br />
+			 */
+			</code>
+		</div>
+		<input type="button" value="Run" onclick="changeColor();"/>
+		<script type="text/javascript">
+		function changeColor(){
+			var color;
+			var index = prompt("Enter 1 for blue, 2 for red, 3 for green");
+			switch(parseInt(index)) {
+			 case 1:
+			  color = "blue";   break;
+			 case 2:
+			  color = "red";   break;
+			 case 3:
+			  color = "green";   break;
+			 default:
+			  color = "black";   break;
+			}
+			//document.body.style.backgroundColor = color;
+			(document.getElementsByTagName("body"))[0].style.backgroundColor = color;
+		}
+		</script>
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

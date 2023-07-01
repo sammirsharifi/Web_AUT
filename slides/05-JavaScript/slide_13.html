@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		JavaScript Basic: Variables Scope
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<ul class="l1">
+			<li>By default (either <code>var</code> or not) scope is either <em>global</em> or <em>function</em>
+			<ul class="l2">
+				<li style="margin-bottom:0px;">Variables defined in a block (other than functions) are accessible outside the block</li>
+				<pre style="font-size:70%; margin:0px;"><code>function f(){
+	while(true){ var x = 20; }
+	// x = 20 here
+}
+				</code></pre>
+			</ul>
+			</li>
+			<li>From ECMA 2015, <code>let</code> and <code>const</code> can be used to define <em>block</em> scope</li>
+				<pre style="font-size:70%; margin:0px;"><code>function f(){
+	while(true){ let x = 20; }
+	// x is not accessible here
+}
+				</code></pre>
+		
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+						
+<!--						
+						<script type="text/javascript">
+							fixlinks();
+
+global_1 = 10;
+var global_2 = 20;
+function f(){
+	f_var1 = 30;
+	var f_var2 = 40;
+	for(i = 0; i < 1; i++){
+		for_var1 = 50;
+		var for_var2 = 60;
+		let for_var3 = 70;
+		window.alert("In For: global_1 = " + global_1 + ", global_2 = "+ global_2 + ", f_var1 = "+ f_var1 +", f_var2 = "+ f_var2 +", for_var1 =" + for_var1 + ", for_var2 = " + for_var2 +", for_var3 = " + for_var3);
+
+	}
+	
+	window.alert("In Function: global_1 = " + global_1 + ", global_2 = "+ global_2 + ", f_var1 = "+ f_var1 +", f_var2 = "+ f_var2 +", for_var1 =" + for_var1 + ", for_var2 = " + for_var2 /* +", for_var3 = " + for_var3*/);
+}
+
+f();
+window.alert("In Global: global_1 = " + global_1 + ", global_2 = "+ global_2 /* + ", f_var1 = "+ f_var1*/  /*+", f_var2 = "+ f_var2 */ /* + ", for_var1 =" + for_var1 */ /* + ", for_var2 = " + for_var2 */ /* + ", for_var3 = " + for_var3 */);
+
+	
+/*
+var myVar = 100;
+     function myFunc(newValue) {
+		var myVar = 200;
+	    alert(myVar);      			// 1
+		alert(this.myVar); 			// 2
+		return function(step) {
+			newValue += step;
+			return newValue + myVar + this.myVar;
+		};
+    }
+
+    var myResult = myFunc(1000);
+    alert(myResult(2000)); 				//3	
+	myVar = 10;
+    alert(myResult(5000)); 				//4
+*/
+						</script>
+-->						
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("common.css"); @import url("slide_small.css"); </style>
+	<style type="text/css">
+		td {
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	</style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Form Validation by Regular Expression
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+			 <code><var>reg_expr</var> = /<var>expression</var>/;</code> <br />
+			 <code><var>reg_expr</var>.test(<var>string</var>)</code> or
+			 <code><var>string</var>.match(<var>reg_expr</var>)</code> returns true, if the pattern is <em>found in</em> the string.
+			<table border="1" style="margin-top:15px; margin-bottom:15px;">
+
+				<tr>
+					<td><code><var>c</var>*</code></td><td>&ge; 0 of <var>c</var></td> <td><code><var>c</var>+</code></td><td>&ge; 1 of <var>c</var></td>
+				</tr>
+
+				<tr>
+					<td><code><var>c</var>?</code></td><td>0 or 1 of <var>c</var></td> <td><code><var>c</var>{<var>x</var>}</code></td><td>x times of <var>c</var></td>
+				</tr>
+
+				<tr>
+					<td><code>.</code></td><td>A char (no new line)</var></td> <td><code><var>c1</var>|<var>c2</var></code></td><td><var>c1</var> or <var>c2</var></td>
+				</tr>
+
+				<tr>
+					<td><code>[]</code> </td><td>Any combination of given characters</td> <td><code>[^]</code></td><td>Any string without the given characters</td>
+				</tr>
+
+				<tr>
+					<td><code>\d</code> </td><td>A digit</td> <td><code>\D</code></td><td>Every thing except digits</td>
+				</tr>
+				<tr>
+					<td><code>^<var>c</var> </code></td><td>Beginning match</td> <td><code><var>c</var>$</code></td><td>End match</td>
+				</tr>
+			</table>
+
+				<code>var m = /^ab*c+d{3}z$/;</code> "acz": False; "abbccdddz": True; "ffabbccdddz": False <br />
+				<code>var m = /ab*c+d{3}z/;</code>  "abbccdddz": True; "ffabbccdddz": True; "ffabbccdddzggg": True <br />
+				To match Date format: <code>/^\d{4}\/\d{1,2}\/\d{1,2}$/</code>
+
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+							expr =/^ab*c+d{3}z$/;
+							str = "ff\nabbccdddz\ngg";
+							result = str + " vs " + expr;
+							if(expr.test(str))
+								result += " IS matched";
+							else
+								result += " is NOT matched";
+							console.log(result);
+							</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+	<script type="text/javascript">
+
+		function readCookie() {
+			if (document.cookie) {
+				var theCookies = document.cookie;
+				window.alert(localStorage.getItem("myCookie"));
+				var cookie_array = theCookies.split(";");
+				for(i = 0; i < cookie_array.length; i++){
+					var thisCookie = cookie_array[i];
+					var pos = thisCookie.indexOf("username=");
+					if (pos != -1) {
+						var tmp_array = thisCookie.split("=");
+						var value = tmp_array[1];
+						window.document.cookieForm.username.value=value;
+						window.document.cookieForm.persist.checked=true;
+					}
+				}
+			}
+		}
+
+		function setCookie() {
+			if (window.document.cookieForm.persist.checked) {
+				var expDate = new Date();
+				expDate.setFullYear(expDate.getFullYear() + 1);
+				var who = window.document.cookieForm.username.value;
+				//document.cookie = "username=" + who + ";" + "expires=" + expDate.toGMTString();
+				localStorage.setItem ("myCookie", who);
+			} else {
+				deleteCookie();
+			}
+			return true;
+		}
+
+		function deleteCookie() {
+			if (document.cookie) {
+				var expDate = new Date();
+				expDate.setFullYear(expDate.getFullYear() - 1);
+				document.cookie = "username=" + "" + ";" +
+				"expires=" + expDate.toGMTString();
+			}
+		}
+	</script>
+</head>
+<body onload="readCookie();">
+
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		Cookies Example
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main" style="font-size: 2em;">
+		<br />
+		<br />
+		<div>
+		<form name="cookieForm" onsubmit="return setCookie();" action="login.html" method="get">
+			<div style="max-width:25%;;border-style: solid; border-color:white;">
+				User ID: <input type="text" name="username">
+			</div>
+			<div style="max-width:25%;border-style: solid; border-color:white;">
+			Password: <input type="password" name="pwd" >
+			</div>
+			<input type="checkbox" name="persist"> Remember user ID <br>
+			<input type="submit" value="Submit">
+		</form>
+		</div>
+
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

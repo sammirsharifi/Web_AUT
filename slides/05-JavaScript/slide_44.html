@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title> </title>
+	<style type="text/css"> @import url("slide.css"); </style>
+	<script type="text/javascript", src="slide.js"> </script>
+</head>
+<body>
+	<script type="text/javascript"> setheight(); </script>
+
+	<div id="pagehead">
+		DOM Object Access by Name
+	</div>
+
+	<div id="topline">
+		<p> &nbsp; </p>
+	</div>
+
+	<div id="main">
+		<div class="code">
+			<code>
+				&lt;form name=<var>"nametest"</var>&gt; <br />
+				&lt;input name=<var>"output"</var> type="text" value=<var>"Default Text"</var>/&gt; <br />
+				&lt;/form&gt;
+			</code>
+		</div>
+
+		<form name="nametest">
+			<input name="output" type="text" value="Default Text"/>
+		</form>
+
+		<div class="code">
+			<code>
+				document.<var>nametest</var>.<var>output</var>.value='New Value';
+			</code>
+		</div>
+		<input type="button" value="Run" onclick="document.nametest.output.value='New Value';" />
+
+		<ul class="l1">
+			<li>We need to assign a name to all parents &amp; children</li>
+			<ul class="l2">
+				<li>Children are <em>not</em> directly accessible by <code>document.<var>childname</var></code> </li>
+			</ul>
+			<li>Is not really useful and practical</li>
+		</ul>
+	</div>
+
+	<div id="bottomline">
+		<p> &nbsp; </p>
+	</div>
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 5%">
+				 <img src="aut.png" alt="aut"/>
+			</td>
+			<td style="text-align: center; width: 90%">
+				<table align="center" >
+					<tr style="width: 10%">
+						<td><a id="prevpage" href=""><img src="prev.jpg" alt="previous"/></a></td>
+						<td id="pagenumber" style="width: 40%"></td>
+						<td><a id="nextpage" href=""><img src="next.jpg" alt="next"/></a></td>
+						<script type="text/javascript">
+							fixlinks();
+						</script>
+					</tr>
+				</table>
+			</td>
+			<td style="width: 5%">
+				<img src="ceit.png" alt="ceit"/>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
